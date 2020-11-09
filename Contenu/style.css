@@ -1,0 +1,98 @@
+/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+   (min-height) sur un bloc, il faut que son parent direct ait lui-même une
+   hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+   pixels, em, autres unités...).
+   Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+   hauteur du «grand-père», et ainsi de suite.
+   Pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous faut:
+   - un parent (body) en "height: 100%";
+   - le parent de body également en "height: 100%". */
+   html, body {
+    height: 100%;
+}
+
+body {
+  padding: -20%;
+    color: #000000;
+    background:rgb(255, 231, 231) ;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+
+.titreBillet {
+    margin-bottom : 0px;
+}
+
+#global {
+    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
+    background: #ffffff;
+    width: 70%;
+    margin: auto;    /* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+}
+
+#contenu {
+    margin-bottom : 30px;
+}
+
+#titreBlog {
+    text-align: left;
+}
+#piedBlog{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(110, 110, 110);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(114, 102, 102);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
