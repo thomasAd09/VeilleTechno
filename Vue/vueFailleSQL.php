@@ -27,11 +27,11 @@ if (isset($_POST['username'])){
       if($logged_in_user['user_type'] == 'admin'){
 
          $_SESSION['username'] = $username;
-         header("Location: admin.php");
+         header("Location: FailleSQL/admin.php");
       }else{
 
          $_SESSION['username'] =  $username;
-         header("Location: user.php");
+         header("Location: FailleSQL/user.php");
       }
    }else{
       $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
@@ -111,20 +111,32 @@ if(isset($_POST['login'])) {
                      echo $message;
                   }
                ?>
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+               
 					
             </div>
 				
          </div>
 			
       </div>
-
+<h2>Définition</h2>
+<div class=def>
+<p class="flotte">
+ <img src="/veille/Contenu/images/sql.png" alt="sql" />
+</p>
+<p><br><br><br><br><br><br><br><br><br>La faille SQLi, abréviation de SQL Injection, soit injection SQL en français, est un groupe de méthodes d'exploitation de faille de sécurité d'une application interagissant
+ avec une base de données. Elle permet d'injecter dans la requête SQL en cours un morceau de requête non prévu par le système et pouvant en compromettre la sécurité.</p>
+ </div class=def>
+ <br> <br> <br> <br> <br> <br> <br>
+ <h2>Une faille plus d'actualité </h2>
    </body>
 </html>
 
 <?php
 
+
 $contenu = ob_get_clean();
+
+
 
 require 'gabarit.php'; ?>
 

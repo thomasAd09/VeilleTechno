@@ -96,3 +96,6 @@ ul {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .flotte {
+    float:left;
+    }

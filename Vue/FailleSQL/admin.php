@@ -1,5 +1,6 @@
 <?php
-ob_start();
+ob_start(); 
+$sous_titre = 'Administrateur';
 session_start();
 
 if(isset($_SESSION['username'])) {
@@ -13,5 +14,5 @@ header('location: vueFailleSQL.php');
 
 <?php
 $contenu = ob_get_clean();
-require "Vue/gabarit.php";
+require "../gabarit.php";
 ?>

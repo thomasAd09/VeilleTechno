@@ -1,11 +1,12 @@
 <?php
 ob_start();
+$sous_titre = 'Utilisateur';
 session_start();
 
 if(isset($_SESSION['username'])) {
 echo "Vous êtes connecté en tant que <strong>".$_SESSION['username']."</strong><br/>";
 }else {
-header('location: vueFailleSQL.php');
+header('location: Vue/vueFailleSQL.php');
 }
 ?>
 
@@ -13,5 +14,5 @@ header('location: vueFailleSQL.php');
 
 <?php
 $contenu = ob_get_clean();
-require "Vue/gabarit.php";
+require "../gabarit.php";
 ?>

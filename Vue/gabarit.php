@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="fr">
+<link rel="icon" type="image/png" href="/veille/Contenu/images/logo.png" />
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../Contenu/style.css" />
-    <title><?= $titre ?></title>   <!-- Élément spécifique -->
+    <link rel="stylesheet" href=" ../Contenu/style.css"/>
+    <link rel="stylesheet" href=" ../../Contenu/style.css"/>
+    <title>Veille Technologique</title>   <!-- Élément spécifique -->
   </head>
   <body>
     <div id="global">
@@ -12,13 +14,12 @@
             <ul>
                 <li><a href="index.php">Présentation</a></li>
                 <li><a href="vueFailleSQL.php">Faille SQL</a></li>
-                <li><a href="vueLFI.php">Faille LFI</a></li>
+                <li><a href="vueLFI.php?fichier=">Faille LFI/RFI</a></li>
                 <li class="dropdown">
-                    <a href="vueFailleXSS.php" class="dropbtn">Faille XML</a>
+                    <a href="vueFailleXSS.php" class="dropbtn">Faille XSS</a>
                     <div class="dropdown-content">
                         <a href="vueReflectedXSS.php">Reflected XSS</a>
                         <a href="vueStoredXSS.php">Stored XSS</a>
-                        <a href="vueCSSXSS.php">Cross Site Scripting XSS</a>
                     </div>
                 </li>
                 <li><a href="vueManInTheMiddle.php">Attaque de l'Homme du Milieu</a></li>

@@ -1,22 +1,18 @@
-<?php
+<?php ob_start();
 
-$sous_titre = "Local File Include";
+$sous_titre ='Local File Include (LFI)';
 
-ob_start(); 
+$fichier = $_GET['fichier'];
 
-$page = array_key_exists('page', $_GET) ? $_GET['page'] : null ;
-if (!is_null($page)) {
-  include($page) ;
-} else {
-  echo "Aucun page à inclure..." ;
-}   
-
-?>
-
-
-
-<?php
+if($fichier == "") 
+{
+    include("FailleLFI/LFIaccueil.php");   
+}
+else
+{
+    include("fichier/$fichier");
+}
 
 $contenu = ob_get_clean();
-
 require 'gabarit.php';
+?>
